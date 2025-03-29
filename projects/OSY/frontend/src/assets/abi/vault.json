@@ -1,0 +1,182 @@
+[
+	{
+		"inputs": [],
+		"name": "applyInterest",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "currentChainSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint32",
+						"name": "actionChainId",
+						"type": "uint32"
+					},
+					{
+						"internalType": "enum IOmniVault.ProtocolType",
+						"name": "protocolId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"internalType": "struct IOmniVault.Path[]",
+				"name": "actions",
+				"type": "tuple[]"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "protocolTotalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint32",
+				"name": "_chainId",
+				"type": "uint32"
+			}
+		],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint32",
+				"name": "_chainId",
+				"type": "uint32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_newTotalSupply",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_reqId",
+				"type": "uint256"
+			}
+		],
+		"name": "updateTotalSupply",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint32",
+						"name": "actionChainId",
+						"type": "uint32"
+					},
+					{
+						"internalType": "enum IOmniVault.ProtocolType",
+						"name": "protocolId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"internalType": "struct IOmniVault.Path[]",
+				"name": "actions",
+				"type": "tuple[]"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint32",
+						"name": "actionChainId",
+						"type": "uint32"
+					},
+					{
+						"internalType": "enum IOmniVault.ProtocolType",
+						"name": "protocolId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"internalType": "struct IOmniVault.Path[]",
+				"name": "actions",
+				"type": "tuple[]"
+			}
+		],
+		"name": "withdrawAndBridgeAndDeposit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
