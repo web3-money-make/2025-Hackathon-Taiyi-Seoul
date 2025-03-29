@@ -1,0 +1,38 @@
+{
+  "name": "@account-abstraction/utils",
+  "version": "0.8.0",
+  "main": "./dist/src/index.js",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "clear": "rm -rf dist artifacts cache src/types",
+    "hardhat-compile": "hardhat compile",
+    "lint-fix": "eslint -f unix . --fix",
+    "watch-tsc": "tsc -w --preserveWatchOutput",
+    "tsc": "tsc",
+    "sol-ts": "yarn hardhat-compile && yarn tsc"
+  },
+  "dependencies": {
+    "@account-abstraction/contracts": "^0.8.0",
+    "@ethereumjs/util": "10.0.0-alpha.1",
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/abstract-provider": "^5.7.0",
+    "@ethersproject/abstract-signer": "^5.7.0",
+    "@ethersproject/keccak256": "^5.7.0",
+    "@ethersproject/providers": "^5.7.0",
+    "@openzeppelin/contracts": "^5.2.0",
+    "debug": "^4.3.4",
+    "ethereumjs-util": "^7.1.5",
+    "ethers": "^5.7.0",
+    "rlp": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "hardhat": "^2.17.0"
+  }
+}

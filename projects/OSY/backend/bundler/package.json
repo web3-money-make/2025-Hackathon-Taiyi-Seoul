@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "aa-bundler",
+  "version": "0.2.0",
+  "author": "Dror Tirosh",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "submodules/account-abstraction/contracts",
+      "submodules/rip7560"
+    ],
+    "nohoist": [
+      "**eslint**"
+    ]
+  },
+  "scripts": {
+    "bundler": "yarn --cwd packages/bundler bundler",
+    "bundler-rip7560": "yarn --cwd packages/bundler bundler-rip7560",
+    "bundler-eip7702": "yarn --cwd packages/bundler bundler-eip7702",
+    "runop": "yarn --cwd packages/bundler runop",
+    "runop-goerli": "yarn runop --network goerli --unsafe",
+    "create-all-deps": "jq '.dependencies,.devDependencies' packages/*/package.json |sort  -u > all.deps",
+    "depcheck": "lerna exec --no-bail --stream --parallel --ignore \"@account-abstraction/contracts\" -- npx depcheck --ignores=\"@account-abstraction/contracts,@openzeppelin/contracts,@uniswap/v3-periphery\"",
+    "hardhat-node": "lerna run hardhat-node --stream --no-prefix --",
+    "hardhat-deploy": "lerna run hardhat-deploy --stream --no-prefix --",
+    "lerna-clear": "lerna run clear",
+    "lerna-lint": "lerna run lint --stream --parallel -- ",
+    "lerna-test": "lerna run hardhat-test --stream --",
+    "lerna-tsc": "lerna run tsc --scope @account-abstraction/*",
+    "lerna-watch-tsc": "lerna run --stream --parallel watch-tsc",
+    "lint-fix": "lerna run lint-fix --parallel",
+    "clear": "lerna run clear",
+    "hardhat-compile": "lerna run hardhat-compile",
+    "preprocess": "yarn preprocess1 && yarn preprocess2",
+    "preprocess2": "yarn lerna-clear && yarn hardhat-compile && yarn lerna-tsc",
+    "preprocess1": "yarn submodule-update && yarn && cd submodules/account-abstraction && yarn && yarn --cwd contracts prepack",
+    "submodule-update": "git submodule update --remote --init --recursive",
+    "runop-self": "ts-node ./packages/bundler/src/runner/runop.ts --deployFactory --selfBundler --unsafe",
+    "ci": "env && yarn && yarn depcheck && yarn preprocess && yarn lerna-test"
+  },
+  "dependencies": {
+    "@ethereumjs/common": "^5.0.0-alpha.1",
+    "@ethereumjs/tx": "^6.0.0-alpha.1",
+    "@ethereumjs/util": "^10.0.0-alpha.1",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "depcheck": "^1.4.7",
+    "eslint": "^8.21.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "lerna": "^8.1.9",
+    "typescript": "^5.6.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}
