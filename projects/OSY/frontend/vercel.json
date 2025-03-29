@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "pages/api/*.ts": {
+      "maxDuration": 300
+    },
+    "pages/api/*": {
+      "maxDuration": 300
+    }
+  }
+}

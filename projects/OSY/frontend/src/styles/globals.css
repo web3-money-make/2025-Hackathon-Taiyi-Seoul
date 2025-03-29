@@ -1,0 +1,244 @@
+@import 'tailwindcss';
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
+:root {
+  --background: #000010;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+@layer base {
+  :root {
+    --toastify-color-progress-info: #1e1e1e !important;
+    --toastify-color-progress-bgo: 1 !important;
+    --dark-50: #40485f;
+    --dark-100: #293042;
+    --dark-200: #22283a;
+    --dark-300: #1c2130;
+    --dark-400: #181d2a;
+    --grey-50: #fff;
+    --grey-100: #f8f8f8;
+    --grey-200: #f1f3f9;
+    --grey-300: #eaedf6;
+    --grey-400: #dbe1f0;
+    --grey-500: #c9d2e8;
+    --grey-600: #7986aa;
+    --grey-700: #292929;
+    --surface-grey-50: #fff;
+    --surface-grey-200: #f1f3f9;
+    --surface-grey-300: #eaedf6;
+    --surface-grey-400: #dbe1f0;
+    --surface-grey-600: #7986aa;
+    --bg-grey-300: #eaedf6;
+    --bg-dark-300: #eaedf6;
+    --primary-50: #3861d1;
+    --primary-200: #3467f4;
+    --opc-100: rgba(52, 103, 244, 0.12);
+    --opc-200: rgba(52, 103, 244, 0.24);
+    --opc-300: rgba(52, 103, 244, 0.48);
+    --secondary: #7986aa;
+    --negative-100: rgba(255, 103, 38, 0.12);
+    --negative-200: rgba(255, 103, 38, 0.24);
+    --negative-300: rgba(255, 103, 38, 0.48);
+    --negative-400: #ff6726;
+    --notice-100: rgba(245, 162, 0, 0.12);
+    --notice-200: rgba(245, 162, 0, 0.24);
+    --notice-300: rgba(245, 162, 0, 0.48);
+    --notice-400: #f5a200;
+    --positive-100: rgba(0, 194, 103, 0.12);
+    --positive-200: rgba(0, 194, 103, 0.24);
+    --positive-300: rgba(0, 194, 103, 0.48);
+    --positive-400: #00c267;
+    --shadow-100: 0px 10px 4px 0px rgba(5, 30, 97, 0.06);
+    --shadow-200: 0px 6px 4px 0px rgba(190, 201, 228, 0.25);
+    --shadow-300: 0px 10px 24px 0px rgba(5, 30, 97, 0.24);
+    --logo: #292929;
+
+    .toast-body > div {
+      display: inline-flex;
+    }
+
+    .Toastify__progress-bar--wrp[data-hidden='true'] {
+      display: none;
+    }
+
+    .Toastify__toast {
+      min-height: auto;
+    }
+
+    .Toastify__toast-container {
+      top: 100px;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    .Toastify__toast-body {
+      padding-top: 4;
+      padding-bottom: 4;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .Toastify__toast-body > div {
+      display: inline-flex;
+    }
+  }
+
+  .dark {
+    --toastify-color-progress-info: #1e1e1e !important;
+    --toastify-color-progress-bgo: 1 !important;
+    --grey-50: #fff;
+    --grey-100: #292929;
+    --grey-200: #22283a;
+    --grey-300: #1c2130;
+    --grey-400: #181d2a;
+    --grey-500: #40485f;
+    --grey-600: #7986aa;
+    --grey-700: #fff;
+    --surface-grey-50: #293042;
+    --surface-grey-200: #22283a;
+    --surface-grey-300: #1c2130;
+    --surface-grey-400: #181d2a;
+    --surface-grey-600: #7986aa;
+    --bg-grey-300: #1c2130;
+    --bg-dark-300: #1c2130;
+    --primary-50: #3861d1;
+    --primary-200: #3467f4;
+    --opc-100: rgba(52, 103, 244, 0.12);
+    --opc-200: rgba(52, 103, 244, 0.24);
+    --opc-300: rgba(52, 103, 244, 0.48);
+    --secondary: #7986aa;
+    --negative-100: rgba(255, 103, 38, 0.12);
+    --negative-200: rgba(255, 103, 38, 0.24);
+    --negative-300: rgba(255, 103, 38, 0.48);
+    --negative-400: #ff6726;
+    --notice-100: rgba(245, 162, 0, 0.12);
+    --notice-200: rgba(245, 162, 0, 0.24);
+    --notice-300: rgba(245, 162, 0, 0.48);
+    --notice-400: #f5a200;
+    --positive-100: rgba(0, 194, 103, 0.12);
+    --positive-200: rgba(0, 194, 103, 0.24);
+    --positive-300: rgba(0, 194, 103, 0.48);
+    --positive-400: #00c267;
+    --shadow-100: 0px 14px 4px 0px rgba(20, 23, 31, 0.2);
+    --shadow-200: 0px 8px 4px 0px rgba(20, 23, 31, 0.3);
+    --shadow-300: 0px 10px 24px 0px rgba(20, 23, 31, 0.3);
+    --logo: #fff;
+  }
+
+  @font-face {
+    font-family: 'Satoshi-Variable';
+    font-weight: 400 500 700 900;
+    font-style: normal;
+    font-display: swap;
+    src: url('/assets/fonts/Satoshi-Variable.woff2') format('woff2-variations');
+  }
+
+  html {
+    font-family:
+      Satoshi,
+      'Satoshi-Variable',
+      SatoshiVariable,
+      'Pretendard Variable',
+      Pretendard,
+      -apple-system,
+      BlinkMacSystemFont,
+      system-ui,
+      Roboto,
+      'Helvetica Neue',
+      'Segoe UI',
+      'Apple SD Gothic Neo',
+      'Noto Sans KR',
+      'Malgun Gothic',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol',
+      sans-serif !important;
+    color: var(--grey-700);
+    word-break: keep-all;
+    font-variant-ligatures: none;
+  }
+
+  html,
+  body {
+    font-synthesis: none;
+  }
+
+  html * {
+    outline: none;
+  }
+
+  canvas {
+    width: 100%;
+  }
+
+  body {
+    --header-height: 85px;
+  }
+}
+
+@layer components {
+  input:read-only {
+    @apply hover:cursor-not-allowed;
+  }
+  a[data-tooltip-id],
+  svg[data-tooltip-id] {
+    @apply hover:cursor-help;
+  }
+}
+
+@layer utilities {
+  .h-error {
+    height: calc(100dvh - 296px);
+  }
+
+  .side-shadow {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 12.5%,
+      rgb(0, 0, 0) 87.5%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply hidden;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  .tooltip strong {
+    @apply font-extrabold;
+  }
+}
