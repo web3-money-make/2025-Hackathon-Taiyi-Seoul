@@ -34,4 +34,4 @@ The smartest stablecoin yield aggregator, providing maximum optimized returns ac
 - Woogie - Smart Contract Developer (0xaa9bD5D22112AB640C801E0935553f4eA4c78851)
 - Sim.on - Backend Developer (0x1fE65D5Ff4Cb53ACccb2628d0392F1262f7D5605)
 - Hangole - Frontend Developer (0xE1D5B27C64aCdcdc2De9E06D69506D554dc55103)
-- Shamshod - Smart Contract Developer (0x27cb3FabCca65e8305EAFCFB0A21fe9Ea02C6056)
+- Shamshod - Smart Contract Developer (0x27cb3FabCca65e8305EAFCFB0A21fe9Ea02C6056)| Seoul Nation University student (shamshod@snu.ac.kr)
